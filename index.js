@@ -14,3 +14,20 @@ function adicionarInteresse(){
         alert("Digite um interesse ou hobbie")
     }
 }
+
+function addEnter(event){
+    if(event.key === "Enter"){
+        adicionarInteresses();
+    }
+}
+
+function pegarDados() { 
+    let interesses = localStorage.getItem("meus-interesses");
+    return interesses ? JSON.parse(interesses) :[];
+}
+
+function mostrarInteresses() {
+    let interessesSalvos = pegarDados();
+    let lista = document.getElementById("lista-interesses");
+    lista.innerHTML = "";
+}
