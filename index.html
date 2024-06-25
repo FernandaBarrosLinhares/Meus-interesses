@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,19 +19,15 @@
             <h1>Meus interesses</h1>
         </header>
         <div class="form">
-            <input type="text" id="input-interesse" placeholder="Digite algum interesse ou hobbie">
-            <button onclick="adicionarInteresse()" id="add-interesse">Adicionar</button>
+            <input type="text" id="input-interesse" placeholder="Digite algum interesse ou hobbie"onkeyup="addEnter(event)">
+            <button onclick="adicionarInteresse()" id="add-Interesse">Adicionar</button>
         </div>
 
         <div class="list">
             <ul id="lista-interesses"></ul>
             <div>
-                <strong>Lista:</strong>
-                <button class="button-clear">Limpar lista</button>
-            </div> 
-             <ul>
-                  <!-- Inclua os interesses aqui  -->
-            </ul> 
+                <button ondblclick="limparLista()" class="btn_limparLista">Limpar lista</button>
+            </div>
         </div>
     </main>
 
