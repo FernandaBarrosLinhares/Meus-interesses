@@ -7,7 +7,7 @@ function adicionarInteresse(){
             item.textContent = valorInput_interesse;
             let interesses = pegarDados();
             interesses.push(item.textContent);
-            localStorage.setItem("meus-interesses", JSON.stringfy(interesses));
+            localStorage.setItem("meus-interesses", JSON.stringfiy(interesses));
             mostrarInteresses();
             input_interesse.value = "";
         }else{
@@ -40,7 +40,7 @@ function adicionarInteresse(){
             btn_excluir.onclick = function(){
                 excluirInteresse(interesse);
             };
-             item.appendChild(btn_excluir);
+            item.appendChild(btn_excluir);
             lista.appendChild(item);    
         });
     }
@@ -48,7 +48,7 @@ function adicionarInteresse(){
     function excluirInteresse(index){
         let interesses = pegarDados();
         interesses.splice(index,1);
-        localStorage.setItem("meus-interesses",JSON.stringfy(interesses));
+        localStorage.setItem("meus-interesses",JSON.stringify(interesses));
         mostrarInteresses();
     }
 
